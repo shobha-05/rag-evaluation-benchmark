@@ -1,0 +1,8 @@
+{
+  "strategy": "Paragraph-aware Chunking + Vector Search",
+  "total_questions": 50,
+  "correct": 25,
+  "partial": 22,
+  "incorrect": 3,
+  "semantic_score": 0.72
+}

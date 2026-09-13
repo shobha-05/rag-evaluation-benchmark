@@ -1,0 +1,8 @@
+{
+  "strategy": "Simple Chunking + Vector Search",
+  "total_questions": 50,
+  "correct": 28,
+  "partial": 17,
+  "incorrect": 5,
+  "semantic_score": 0.73
+}

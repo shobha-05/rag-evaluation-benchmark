@@ -1,0 +1,402 @@
+[
+  {
+    "question_id": "q001",
+    "question": "What problem is the Factory Method pattern designed to solve?",
+    "expected_answer": "It lets a superclass define the interface for creating an object while deferring the decision of which concrete class to instantiate to its subclasses — avoiding hardcoded constructor calls scattered through client code.",
+    "source_section": "Creational Design Patterns > Factory Method",
+    "difficulty": "easy",
+    "relevant_content": "Factory Method (aka \"Virtual Constructor\") delegates object creation to an overridable method so subclasses can change the product type."
+  },
+  {
+    "question_id": "q002",
+    "question": "How would you describe the Abstract Factory pattern in an interview?",
+    "expected_answer": "It's a creational pattern that produces entire families of related objects through one interface, without the client code ever naming the concrete classes — guaranteeing the returned products are compatible with each other.",
+    "source_section": "Creational Design Patterns > Abstract Factory",
+    "difficulty": "easy",
+    "relevant_content": "Abstract Factory creates families of related products (book's example: Chair/Sofa/CoffeeTable in Modern/Victorian/ArtDeco variants) via one interface."
+  },
+  {
+    "question_id": "q003",
+    "question": "What does the Builder pattern let you do, and what's a real-world example from the book?",
+    "expected_answer": "It constructs a complex object step by step, so the same construction process can produce different representations. The book's example is building different House configurations (simple vs. one with a backyard, heating, and plumbing) using the same builder steps.",
+    "source_section": "Creational Design Patterns > Builder",
+    "difficulty": "easy",
+    "relevant_content": "Builder separates step-by-step construction from the final representation, illustrated with a House example."
+  },
+  {
+    "question_id": "q004",
+    "question": "What's the Prototype pattern also known as, and what problem does it solve?",
+    "expected_answer": "Also known as \"Clone.\" It lets you copy an existing object without coupling your code to that object's concrete class — useful since some fields may be private and unreachable from outside.",
+    "source_section": "Creational Design Patterns > Prototype",
+    "difficulty": "easy",
+    "relevant_content": "Prototype's alias is \"Clone\"; it enables copying objects independent of their concrete class, addressing the private-field copying problem."
+  },
+  {
+    "question_id": "q005",
+    "question": "The book says Singleton solves two problems at once. What are they?",
+    "expected_answer": "Restricting a class to a single instance, and providing a global access point to that instance.",
+    "source_section": "Creational Design Patterns > Singleton",
+    "difficulty": "easy",
+    "relevant_content": "The Problem section states Singleton solves instance-restriction and global-access simultaneously — which is also why it's called an SRP violation."
+  },
+  {
+    "question_id": "q006",
+    "question": "What is the Adapter pattern's alias, and what does it do?",
+    "expected_answer": "Its alias is \"Wrapper.\" It lets objects with incompatible interfaces collaborate by translating one interface into another the client code expects.",
+    "source_section": "Structural Design Patterns > Adapter",
+    "difficulty": "easy",
+    "relevant_content": "Adapter (\"Wrapper\") is illustrated with a stock-monitoring app needing to integrate a JSON-only analytics library into an XML-based app."
+  },
+  {
+    "question_id": "q007",
+    "question": "What's the core idea behind the Bridge pattern?",
+    "expected_answer": "Splitting one large class (or a closely related set of classes) into two separate hierarchies — abstraction and implementation — so each can be extended independently without a combinatorial explosion of subclasses.",
+    "source_section": "Structural Design Patterns > Bridge",
+    "difficulty": "easy",
+    "relevant_content": "Bridge is introduced via a Shape/Color example showing how combining two dimensions through inheritance alone causes exponential subclass growth."
+  },
+  {
+    "question_id": "q008",
+    "question": "What's the Composite pattern's alias, and what structure is it built for?",
+    "expected_answer": "Its alias is \"Object Tree.\" It's built for tree-shaped object structures, letting you compose objects into trees and treat individual objects and whole compositions the same way.",
+    "source_section": "Structural Design Patterns > Composite",
+    "difficulty": "easy",
+    "relevant_content": "Composite (\"Object Tree\") is illustrated with Products nested inside Boxes, which can themselves nest inside larger Boxes."
+  },
+  {
+    "question_id": "q009",
+    "question": "In one sentence, what does the Decorator pattern do?",
+    "expected_answer": "It attaches new behavior to an individual object at runtime by wrapping that object inside one or more wrapper objects that add the behavior.",
+    "source_section": "Structural Design Patterns > Decorator",
+    "difficulty": "easy",
+    "relevant_content": "Decorator (\"Wrapper\") is illustrated with a notification library where behavior is layered onto a base Notifier class via wrapping."
+  },
+  {
+    "question_id": "q010",
+    "question": "What's the purpose of the Facade pattern?",
+    "expected_answer": "To provide a simplified, limited interface to a complex subsystem, hiding its internal wiring and reducing how tightly client code is coupled to it.",
+    "source_section": "Structural Design Patterns > Facade",
+    "difficulty": "easy",
+    "relevant_content": "Facade is illustrated with a video-conversion framework that gets a simplified entry point instead of requiring clients to orchestrate many subsystem classes."
+  },
+  {
+    "question_id": "q011",
+    "question": "What's the Flyweight pattern's alias, and what does it optimize for?",
+    "expected_answer": "Its alias is \"Cache.\" It optimizes for memory: it fits far more objects into available RAM by sharing common state across multiple objects instead of duplicating that state in each one.",
+    "source_section": "Structural Design Patterns > Flyweight",
+    "difficulty": "easy",
+    "relevant_content": "Flyweight (\"Cache\") is illustrated with a game that crashes from spawning too many particle/bullet objects, each duplicating shared data."
+  },
+  {
+    "question_id": "q012",
+    "question": "What does the Proxy pattern let you do that a direct reference doesn't?",
+    "expected_answer": "It gives you a substitute object that controls access to the real object, letting you run logic before or after a request reaches it (e.g., lazy init, access control, caching) without the client knowing the difference.",
+    "source_section": "Structural Design Patterns > Proxy",
+    "difficulty": "easy",
+    "relevant_content": "Proxy is defined as a placeholder/substitute that controls access to a \"service object,\" acting before/after requests reach it."
+  },
+  {
+    "question_id": "q013",
+    "question": "Name the four pillars of OOP as covered in the book.",
+    "expected_answer": "Abstraction, Encapsulation, Inheritance, and Polymorphism.",
+    "source_section": "Introduction to OOP > Pillars of OOP",
+    "difficulty": "easy",
+    "relevant_content": "These four are each given their own dedicated section in the \"Pillars of OOP\" chapter, with a worked example apiece."
+  },
+  {
+    "question_id": "q014",
+    "question": "State the Single Responsibility Principle.",
+    "expected_answer": "A class should have only one reason to change — i.e., it should own a single part of the software's functionality.",
+    "source_section": "SOLID Principles > Single Responsibility Principle",
+    "difficulty": "easy",
+    "relevant_content": "Given as the chapter's opening tagline, followed by an Employee class example mixing employee-data logic with report formatting."
+  },
+  {
+    "question_id": "q015",
+    "question": "State the Open/Closed Principle, and explain what \"open\" and \"closed\" each mean here.",
+    "expected_answer": "Classes should be open for extension but closed for modification. \"Open\" means you can extend the class (e.g., via a subclass) to add behavior; \"closed\" means its existing, already-relied-upon interface won't change underneath existing clients.",
+    "source_section": "SOLID Principles > Open/Closed Principle",
+    "difficulty": "easy",
+    "relevant_content": "The chapter clarifies that a class can be simultaneously open (extendable) and closed (stable interface), which initially sounds contradictory."
+  },
+  {
+    "question_id": "q016",
+    "question": "When would you reach for Chain of Responsibility instead of a single method with a bunch of if/else checks?",
+    "expected_answer": "When the exact set or order of checks isn't known upfront, needs to run in a specific sequence, or needs to change at runtime — Chain of Responsibility lets you link handlers into a reconfigurable chain instead of hardcoding the checks.",
+    "source_section": "Behavioral Design Patterns > Chain of Responsibility",
+    "difficulty": "medium",
+    "relevant_content": "Applicability covers unknown request types, required handler ordering, and runtime-reconfigurable handler chains."
+  },
+  {
+    "question_id": "q017",
+    "question": "Why would you turn a request into a Command object instead of just calling a method directly?",
+    "expected_answer": "Because a Command object can be passed around, stored, serialized, queued, scheduled, or logged — and by keeping a history of executed commands, you get undo/redo essentially for free.",
+    "source_section": "Behavioral Design Patterns > Command",
+    "difficulty": "medium",
+    "relevant_content": "Applicability covers parameterizing objects with operations, delayed/queued/remote execution via serialization, and undo via a command-history stack."
+  },
+  {
+    "question_id": "q018",
+    "question": "Why does Iterator make sense even when a collection's underlying data structure is unknown or complex?",
+    "expected_answer": "Because it exposes traversal through a generic collection/iterator interface, so client code keeps working regardless of what concrete data structure sits underneath — and multiple iterators can traverse the same collection independently and in parallel.",
+    "source_section": "Behavioral Design Patterns > Iterator",
+    "difficulty": "medium",
+    "relevant_content": "Applicability and Pros/Cons cover hiding complex structures behind generic interfaces and supporting parallel/independent iteration."
+  },
+  {
+    "question_id": "q019",
+    "question": "What's a good signal that you should introduce a Mediator, and what's the main risk of doing so?",
+    "expected_answer": "A good signal is components being tightly, chaotically coupled to many peers (or too dependent on each other to reuse independently). The main risk is the mediator itself turning into a \"God Object\" that knows and controls too much.",
+    "source_section": "Behavioral Design Patterns > Mediator",
+    "difficulty": "medium",
+    "relevant_content": "Applicability lists tight coupling/poor reusability; Cons names the God Object risk explicitly."
+  },
+  {
+    "question_id": "q020",
+    "question": "How does Memento let you implement undo without breaking encapsulation?",
+    "expected_answer": "The originator object creates its own snapshot and hands it off for external storage, so no other object ever reads or writes its private fields directly — the snapshot's contents stay opaque to everyone except the originator.",
+    "source_section": "Behavioral Design Patterns > Memento",
+    "difficulty": "medium",
+    "relevant_content": "Applicability ties Memento specifically to cases where direct field/getter/setter access would violate encapsulation."
+  },
+  {
+    "question_id": "q021",
+    "question": "What's a genuine drawback of the Observer pattern that the book calls out?",
+    "expected_answer": "Subscribers get notified in random order, so you can't rely on any particular subscriber running before another when an event fires.",
+    "source_section": "Behavioral Design Patterns > Observer",
+    "difficulty": "medium",
+    "relevant_content": "Listed as the pattern's single con, versus pros about adding subscribers without touching publisher code."
+  },
+  {
+    "question_id": "q022",
+    "question": "When is the State pattern overkill, according to the book?",
+    "expected_answer": "When a state machine only has a few states and rarely changes — the extra classes the pattern introduces aren't worth it at that scale.",
+    "source_section": "Behavioral Design Patterns > State",
+    "difficulty": "medium",
+    "relevant_content": "Listed as the pattern's single con, contrasted with its benefit for objects with many, frequently-changing states."
+  },
+  {
+    "question_id": "q023",
+    "question": "How does Strategy let you replace inheritance-based design with composition?",
+    "expected_answer": "Instead of subclassing for every algorithm variant, each variant becomes its own interchangeable class behind a common interface, and the context object delegates to whichever one it's holding — swappable at runtime via composition, not locked in at compile time via inheritance.",
+    "source_section": "Behavioral Design Patterns > Strategy",
+    "difficulty": "medium",
+    "relevant_content": "Pros/Cons lists \"replace inheritance with composition\"; Relations contrasts this with Template Method's inheritance-based approach."
+  },
+  {
+    "question_id": "q024",
+    "question": "What SOLID violation risk does Template Method carry, and how does it happen?",
+    "expected_answer": "It can violate the Liskov Substitution Principle if a subclass suppresses a step's default behavior instead of properly extending it, breaking the expectation that subclasses remain substitutable for the base algorithm.",
+    "source_section": "Behavioral Design Patterns > Template Method",
+    "difficulty": "medium",
+    "relevant_content": "Listed explicitly as a con in the Pros and Cons section."
+  },
+  {
+    "question_id": "q025",
+    "question": "What maintenance cost does the Visitor pattern introduce as a class hierarchy grows?",
+    "expected_answer": "Every existing visitor class has to be updated whenever a new element class is added to (or removed from) the hierarchy, since a visitor needs one method per element type it can operate on.",
+    "source_section": "Behavioral Design Patterns > Visitor",
+    "difficulty": "medium",
+    "relevant_content": "Listed as a con: you need to update all visitors each time a class is added to or removed from the element hierarchy."
+  },
+  {
+    "question_id": "q026",
+    "question": "What specifically does the Liskov Substitution Principle require of an overridden method?",
+    "expected_answer": "It should extend the base method's behavior rather than replace it outright, so any code written against the superclass keeps working correctly when handed a subclass instance instead.",
+    "source_section": "SOLID Principles > Liskov Substitution Principle",
+    "difficulty": "medium",
+    "relevant_content": "Frames LSP as a compatibility checklist ensuring subclasses can substitute for their superclass without breaking client code."
+  },
+  {
+    "question_id": "q027",
+    "question": "How does the Interface Segregation Principle tell you to fix a \"fat\" interface?",
+    "expected_answer": "Split it into several smaller, more specific interfaces so each client only implements what it actually uses — a class can implement multiple narrow interfaces even though it can only extend one superclass.",
+    "source_section": "SOLID Principles > Interface Segregation Principle",
+    "difficulty": "medium",
+    "relevant_content": "States clients shouldn't depend on unused methods, and recommends breaking fat interfaces into granular ones."
+  },
+  {
+    "question_id": "q028",
+    "question": "In your own words, what is the Dependency Inversion Principle actually inverting?",
+    "expected_answer": "The usual dependency direction: instead of high-level business-logic classes depending directly on low-level implementation classes, both should depend on shared abstractions — so the low-level details depend on the abstraction, not the other way around.",
+    "source_section": "SOLID Principles > Dependency Inversion Principle",
+    "difficulty": "medium",
+    "relevant_content": "Distinguishes low-level classes (disk/network/DB) from high-level business logic, and describes inverting the dependency direction through abstractions."
+  },
+  {
+    "question_id": "q029",
+    "question": "What's the main goal behind the \"Encapsulate What Varies\" design principle?",
+    "expected_answer": "To minimize the blast radius of future changes by isolating the parts of a system likely to change into their own modules, separate from the stable parts — so a change in one place doesn't ripple through the whole codebase.",
+    "source_section": "Design Principles > Encapsulate What Varies",
+    "difficulty": "medium",
+    "relevant_content": "Uses a ship-with-sealable-compartments analogy: isolating volatile code limits how far a single change's damage spreads."
+  },
+  {
+    "question_id": "q030",
+    "question": "What does \"Program to an Interface, not an Implementation\" actually change about how you write collaborating classes?",
+    "expected_answer": "Instead of making one class depend directly on another's concrete type, you depend on an abstraction describing only what one object needs from the other — keeping the design flexible enough to swap implementations without breaking existing code.",
+    "source_section": "Design Principles > Program to an Interface, not an Implementation",
+    "difficulty": "medium",
+    "relevant_content": "Illustrated with a cat that eats \"any food\" (an abstraction) vs. one that only eats sausages (a concrete dependency)."
+  },
+  {
+    "question_id": "q031",
+    "question": "Give one concrete downside of inheritance that motivates \"Favor Composition Over Inheritance.\"",
+    "expected_answer": "A subclass can't shrink the interface it inherits — it must implement every abstract method from the superclass even if some don't make sense for it, since subclass instances may be passed anywhere the superclass is expected.",
+    "source_section": "Design Principles > Favor Composition Over Inheritance",
+    "difficulty": "medium",
+    "relevant_content": "One of several inheritance caveats listed, alongside risks from unsafely overriding methods."
+  },
+  {
+    "question_id": "q032",
+    "question": "Why is Builder considered a better fix than a \"telescoping constructor\"?",
+    "expected_answer": "A telescoping constructor forces you to keep overloading a constructor to cover different combinations of optional parameters, which gets unwieldy fast. Builder instead exposes construction as discrete steps, so you only invoke the steps you actually need instead of juggling a huge parameter list.",
+    "source_section": "Creational Design Patterns > Builder",
+    "difficulty": "medium",
+    "relevant_content": "Uses a Pizza class with progressively longer overloaded constructors as the canonical \"telescoping constructor\" problem."
+  },
+  {
+    "question_id": "q033",
+    "question": "Walk through how Adapter solves the problem of a third-party library expecting a different data format than your app uses.",
+    "expected_answer": "You write a middle-layer Adapter class that translates between your app's format and the library's expected format, so you can reuse the library unmodified — avoiding both the risk of editing third-party code and duplicating conversion logic throughout your app.",
+    "source_section": "Structural Design Patterns > Adapter",
+    "difficulty": "medium",
+    "relevant_content": "Uses a stock-monitoring app (XML) needing to integrate a third-party analytics library that only accepts JSON."
+  },
+  {
+    "question_id": "q034",
+    "question": "Why is Composite a natural fit for an order made of Products packed into Boxes, which can themselves hold smaller Boxes?",
+    "expected_answer": "Because that structure is literally a tree, and Composite gives leaves (Products) and containers (Boxes) a shared interface — so client code can treat a single product and an entire nested box of products identically, without special-casing either.",
+    "source_section": "Structural Design Patterns > Composite",
+    "difficulty": "medium",
+    "relevant_content": "The Problem section frames Products/Boxes explicitly as a tree; Applicability explains the shared leaf/container interface."
+  },
+  {
+    "question_id": "q035",
+    "question": "Why does the book say Singleton violates the Single Responsibility Principle?",
+    "expected_answer": "Because it bundles two unrelated responsibilities into one class: enforcing that only one instance can exist, and providing global access to that instance.",
+    "source_section": "Creational Design Patterns > Singleton",
+    "difficulty": "medium",
+    "relevant_content": "The Problem section opens by stating Singleton \"solves two problems at the same time, violating the Single Responsibility Principle.\""
+  },
+  {
+    "question_id": "q036",
+    "question": "How do Factory Method and Abstract Factory typically relate to each other as a design evolves?",
+    "expected_answer": "Designs commonly start with Factory Method, since it's simpler and stays customizable through subclassing, and evolve toward Abstract Factory as the app needs to manage multiple related product families — Abstract Factory implementations are often themselves built from a set of Factory Methods.",
+    "source_section": "Creational Design Patterns > Factory Method (Relations); Abstract Factory (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "Both chapters' Relations sections state this same progression and note Abstract Factory classes are often composed of Factory Methods."
+  },
+  {
+    "question_id": "q037",
+    "question": "Compare Builder and Abstract Factory in terms of what each returns and when.",
+    "expected_answer": "Abstract Factory returns the finished product immediately from a single creation call, since it's built for producing families of related objects. Builder is built for multi-step construction of one complex object and lets you run additional steps before the product is considered finished.",
+    "source_section": "Creational Design Patterns > Builder (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "States this exact contrast: Builder's step-by-step, deferred-completion construction vs. Abstract Factory's immediate product return."
+  },
+  {
+    "question_id": "q038",
+    "question": "What's the fundamental trade-off between Prototype and Factory Method?",
+    "expected_answer": "Prototype isn't inheritance-based, so it avoids inheritance's drawbacks, but cloning can require a complicated initialization step. Factory Method is inheritance-based and needs no separate initialization step, but inherits inheritance's usual coupling costs.",
+    "source_section": "Creational Design Patterns > Prototype (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "States this trade-off directly: non-inheritance cloning with complex init (Prototype) vs. inheritance-based creation with no init step (Factory Method)."
+  },
+  {
+    "question_id": "q039",
+    "question": "Decorator and Proxy both wrap an object via composition. What's the key difference in intent?",
+    "expected_answer": "A Proxy typically manages its wrapped service object's life cycle on its own — e.g., creating it lazily. A Decorator's wrapping stack, by contrast, is always assembled and controlled by client code, which decides how many decorators to apply and in what order.",
+    "source_section": "Structural Design Patterns > Decorator (Relations); Proxy (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "Both chapters draw this same distinction: self-managed lifecycle (Proxy) vs. client-controlled composition (Decorator)."
+  },
+  {
+    "question_id": "q040",
+    "question": "How does Decorator differ from Adapter in what happens to the object's interface?",
+    "expected_answer": "Adapter presents a completely different interface to make an incompatible object usable by client code. Decorator keeps the original interface the same or extends it, and — unlike Adapter — supports recursive composition, wrapping an already-decorated object again.",
+    "source_section": "Structural Design Patterns > Adapter (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "States this exact distinction, including that recursive composition is possible with Decorator but not Adapter."
+  },
+  {
+    "question_id": "q041",
+    "question": "Composite and Decorator have near-identical structure diagrams. What's the real behavioral difference?",
+    "expected_answer": "A Decorator is essentially a Composite restricted to exactly one child, and it adds new responsibilities to the object it wraps. Composite is meant to hold many children and aggregates/\"sums up\" their results rather than adding new behavior to them.",
+    "source_section": "Structural Design Patterns > Composite (Relations); Decorator (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "Both chapters state this comparison: same recursive-composition structure, but single-child-plus-new-responsibility (Decorator) vs. many-children-plus-aggregation (Composite)."
+  },
+  {
+    "question_id": "q042",
+    "question": "The book calls State an extension of Strategy. What specifically changes between the two?",
+    "expected_answer": "In Strategy, the interchangeable algorithm objects are fully independent and unaware of each other. In State, concrete state objects aren't restricted that way — a state can know about other states and actively drive the context's transition to a different state.",
+    "source_section": "Behavioral Design Patterns > State (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "States both use composition, but Strategy's helpers stay mutually unaware while State's concrete states can trigger transitions between each other."
+  },
+  {
+    "question_id": "q043",
+    "question": "Compare Strategy and Template Method: what mechanism does each use, and when can the behavior change?",
+    "expected_answer": "Template Method uses inheritance — subclasses override specific algorithm steps — so the variation is fixed at design/compile time (static). Strategy uses composition — the context is handed a different strategy object — so behavior can be swapped at runtime.",
+    "source_section": "Behavioral Design Patterns > Strategy (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "States this exact contrast: inheritance/static/class-level (Template Method) vs. composition/runtime/object-level (Strategy)."
+  },
+  {
+    "question_id": "q044",
+    "question": "Mediator and Observer both manage object communication. What's the primary goal of each?",
+    "expected_answer": "Mediator's goal is eliminating mutual dependencies among components by routing everything through one central mediator object. Observer's goal is dynamic one-way notification, where subscriber objects react to events from a publisher they're watching.",
+    "source_section": "Behavioral Design Patterns > Mediator (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "States these two goals directly, and notes a Mediator implemented via publish/subscribe can end up resembling Observer."
+  },
+  {
+    "question_id": "q045",
+    "question": "How do Facade and Mediator differ in how they relate to the components they manage?",
+    "expected_answer": "A Facade simplifies a subsystem's interface but doesn't add new functionality, and the subsystem's own objects remain free to talk to each other directly — the facade is optional. A Mediator actively centralizes communication: components only know about the mediator and never talk to each other directly.",
+    "source_section": "Structural Design Patterns > Facade (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "States this exact contrast between a subsystem that's unaware of its facade versus components that are fully dependent on their mediator."
+  },
+  {
+    "question_id": "q046",
+    "question": "The book says Flyweight can resemble Singleton in some cases. What two fundamental differences remain?",
+    "expected_answer": "First, Singleton allows exactly one instance, while a Flyweight class can have many instances, each holding different shared (intrinsic) state. Second, a Singleton object can be mutable, while Flyweight objects are meant to be immutable.",
+    "source_section": "Creational Design Patterns > Singleton (Relations)",
+    "difficulty": "hard",
+    "relevant_content": "Lists these two differences explicitly after noting the superficial resemblance between a heavily-reduced Flyweight and a Singleton."
+  },
+  {
+    "question_id": "q047",
+    "question": "You're extending an open-source UI framework that only ships square buttons. You want the framework to use your RoundButton subclass instead, without touching the client code that already calls the framework's button-creation logic. Which pattern applies, and how?",
+    "expected_answer": "Factory Method. Override the framework's factory method (e.g. createButton) in a subclass so it returns RoundButton instead of the default Button; client code keeps calling the same factory method through the base interface and never needs to change.",
+    "source_section": "Creational Design Patterns > Factory Method",
+    "difficulty": "hard",
+    "relevant_content": "The book uses exactly this UIFramework/RoundButton example under Applicability to show Factory Method letting framework users extend internals without changing client code."
+  },
+  {
+    "question_id": "q048",
+    "question": "A Store needs to notify an open-ended, constantly-changing set of Customers when a product comes back in stock, without spamming everyone or making customers poll constantly. Which pattern fits, and why?",
+    "expected_answer": "Observer. Interested customers subscribe to the store's notifications, so only actual subscribers get notified, the subscriber list can grow or shrink freely at runtime, and no one needs to poll for updates.",
+    "source_section": "Behavioral Design Patterns > Observer",
+    "difficulty": "hard",
+    "relevant_content": "The book's Problem section uses this exact Customer/Store/restock scenario to motivate Observer over polling or mass emailing."
+  },
+  {
+    "question_id": "q049",
+    "question": "You're adding \"undo\" to a text editor, but the objects holding state have private fields that shouldn't be exposed. Which two patterns would you combine, and how would responsibilities split between them?",
+    "expected_answer": "Command and Memento. Commands perform the operations on the target object; right before a command executes, a Memento captures that object's state so it can be restored later — without the object ever exposing its private fields to outside code.",
+    "source_section": "Behavioral Design Patterns > Command (Relations); Memento",
+    "difficulty": "hard",
+    "relevant_content": "Command's Relations section states this pairing for undo directly; Memento's Applicability explains why it exists specifically to avoid breaking encapsulation."
+  },
+  {
+    "question_id": "q050",
+    "question": "A class has a large switch statement selecting between variants of the same algorithm, and every new variant means editing that same block. How would Strategy fix this?",
+    "expected_answer": "Extract each algorithm variant into its own class behind a shared interface, and have the original class hold a reference to one of them and delegate to it instead of branching internally — adding a new variant then just means adding a new class, not touching the existing conditional.",
+    "source_section": "Behavioral Design Patterns > Strategy",
+    "difficulty": "hard",
+    "relevant_content": "Applicability describes exactly this scenario and states Strategy removes the conditional by extracting variants into interchangeable classes."
+  }
+]

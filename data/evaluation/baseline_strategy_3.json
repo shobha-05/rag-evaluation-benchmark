@@ -1,0 +1,8 @@
+{
+  "strategy": "Small Fixed Chunking (500) + 100 Overlap + Vector Search",
+  "total_questions": 50,
+  "correct": 34,
+  "partial": 10,
+  "incorrect": 6,
+  "semantic_score": 0.78
+}
